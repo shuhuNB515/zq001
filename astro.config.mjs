@@ -4,11 +4,6 @@ import { fileURLToPath } from 'node:url';
 
 import { defineConfig } from 'astro/config';
 
-export default defineConfig({
-  site: 'https://shuhuNB515.github.io',
-  base: '/zq001/', // 重要：必须是仓库名，前后都有斜杠
-});
-
 import vue from '@astrojs/vue';
 
 import tailwind from '@astrojs/tailwind';
@@ -107,6 +102,9 @@ function redirectMissingRoutes() {
 }
 
 export default defineConfig({
+   site: 'https://shuhuNB515.github.io',
+  base: '/zq001/',
+  outDir: './dist',
   integrations: [
     vue({
       template: {
