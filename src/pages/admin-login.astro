@@ -1,0 +1,62 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import AdminLoginForm from '@/components/admin-login/AdminLoginForm.vue'
+---
+
+<BaseLayout title="管理端登录 - 智取未来">
+  <div class="flex flex-col min-h-screen bg-background">
+    <CommonHeader client:load variant="default" showNav={false} />
+    
+    <main class="flex-1 flex items-center justify-center px-4 py-12">
+      <div class="w-full max-w-6xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <!-- Left Side - Login Form -->
+          <div class="flex flex-col justify-center">
+            <div class="mb-8">
+              <h1 class="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                管理后台登录
+              </h1>
+              <p class="text-lg text-muted-foreground">
+                请输入您的管理员账号和密码以访问后台管理系统
+              </p>
+            </div>
+            
+            <AdminLoginForm client:load />
+            
+            <div class="mt-8 pt-8 border-t border-border">
+              <p class="text-sm text-muted-foreground mb-4">
+                需要帮助？请联系系统管理员
+              </p>
+              <a 
+                href="./homepage.html" 
+                class="inline-flex items-center text-primary hover:text-accent transition-colors font-medium"
+              >
+                <span>返回首页</span>
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Side - Image/Illustration -->
+          <div class="hidden lg:flex items-center justify-center">
+            <div class="relative w-full aspect-square max-w-md">
+              <img 
+                src="https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2025/11/24/0d83e8f1-bf03-4c02-9237-b199e5e6fac4.png"
+                alt="管理后台登录"
+                class="w-full h-full object-cover rounded-2xl shadow-card"
+              />
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <CommonFooter client:idle variant="simple" />
+  </div>
+</BaseLayout>

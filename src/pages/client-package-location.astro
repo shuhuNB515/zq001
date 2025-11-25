@@ -1,0 +1,62 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import PackageLocationMap from '@/components/client-package-location/PackageLocationMap.vue'
+import PackageLocationInfo from '@/components/client-package-location/PackageLocationInfo.vue'
+import RobotStatusDisplay from '@/components/client-package-location/RobotStatusDisplay.vue'
+import PageActions from '@/components/client-package-location/PageActions.vue'
+import { MOCK_PACKAGE_LOCATION } from '@/data/client_data'
+---
+
+<BaseLayout title="快件位置及时间 - 智取未来">
+  <CommonHeader client:load />
+  
+  <main class="flex-1 min-h-[calc(100vh-80px-120px)] bg-gradient-to-b from-background to-secondary/30">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+      <!-- Page Header -->
+      <div class="mb-8">
+        <h1 class="text-4xl font-bold text-foreground mb-2">快件位置及时间</h1>
+        <p class="text-muted-foreground">您的快件已准备就绪，机器人正在为您取件</p>
+      </div>
+
+      <!-- Main Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        <!-- Location Map - Takes 2 columns on large screens -->
+        <div class="lg:col-span-2">
+          <PackageLocationMap 
+            client:load 
+            locationMapUrl={MOCK_PACKAGE_LOCATION.locationMapUrl}
+            shelfId={MOCK_PACKAGE_LOCATION.shelfId}
+            gridId={MOCK_PACKAGE_LOCATION.gridId}
+          />
+        </div>
+
+        <!-- Package Info Sidebar -->
+        <div class="lg:col-span-1">
+          <PackageLocationInfo 
+            client:load 
+            trackingNumber={MOCK_PACKAGE_LOCATION.trackingNumber}
+            shelfId={MOCK_PACKAGE_LOCATION.shelfId}
+            gridId={MOCK_PACKAGE_LOCATION.gridId}
+          />
+        </div>
+      </div>
+
+      <!-- Robot Status and Countdown -->
+      <div class="mb-8">
+        <RobotStatusDisplay 
+          client:load 
+          robotStatus={MOCK_PACKAGE_LOCATION.robotStatus}
+          estimatedPickupTime={MOCK_PACKAGE_LOCATION.estimatedPickupTime}
+        />
+      </div>
+
+      <!-- Action Buttons -->
+      <PageActions client:load />
+    </div>
+  </main>
+
+  <CommonFooter client:idle variant="simple" />
+</BaseLayout>

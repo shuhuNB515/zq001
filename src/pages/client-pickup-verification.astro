@@ -1,0 +1,15 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import VerificationContainer from '@/components/client-pickup-verification/VerificationContainer.vue'
+---
+
+<BaseLayout title="取件身份验证 - 智取未来">
+  <CommonHeader client:load />
+  <main class="flex-1 min-h-[calc(100vh-80px-60px)]">
+    <VerificationContainer client:load />
+  </main>
+  <CommonFooter variant="simple" />
+</BaseLayout>

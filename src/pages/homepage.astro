@@ -1,0 +1,25 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import HeroSection from '@/components/homepage/HeroSection.vue'
+import LoginChoiceSection from '@/components/homepage/LoginChoiceSection.vue'
+import ServiceNavSection from '@/components/homepage/ServiceNavSection.vue'
+import FeatureSection from '@/components/homepage/FeatureSection.vue'
+---
+
+<BaseLayout title="智取未来 - 智能物流自取服务">
+  <div class="flex flex-col min-h-screen bg-background">
+    <CommonHeader client:load />
+    
+    <main class="flex-1">
+      <HeroSection client:idle />
+      <LoginChoiceSection client:load />
+      <ServiceNavSection client:idle />
+      <FeatureSection client:idle />
+    </main>
+    
+    <CommonFooter client:idle variant="full" />
+  </div>
+</BaseLayout>

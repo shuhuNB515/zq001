@@ -1,0 +1,15 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import ClientLoginRegisterPage from '@/components/client-login-register/ClientLoginRegisterPage.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+---
+
+<BaseLayout title="客户端登录注册 - 智取未来">
+  <CommonHeader client:load />
+  <main class="flex-1 min-h-[calc(100vh-80px)]">
+    <ClientLoginRegisterPage client:load />
+  </main>
+  <CommonFooter variant="simple" />
+</BaseLayout>
