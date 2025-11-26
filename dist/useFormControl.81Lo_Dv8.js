@@ -1,0 +1,1 @@
+import{p as toValue,g as unrefElement}from"./useForwardExpose.Ct4MH066.js";import{k as computed}from"./runtime-core.esm-bundler.T-J3b-OY.js";function useFormControl(el){return computed(()=>toValue(el)?!!unrefElement(el)?.closest("form"):!0)}export{useFormControl as u};

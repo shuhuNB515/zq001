@@ -1,0 +1,14 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import AdminLayout from '@/components/common/AdminLayout.vue'
+import PricingConfigContent from '@/components/admin-pricing-config/PricingConfigContent.vue'
+---
+
+<BaseLayout title="寄件价格配置 - 智取未来">
+  <CommonHeader client:load variant="admin" />
+  <AdminLayout client:load headerHeight="80px">
+    <PricingConfigContent client:load />
+  </AdminLayout>
+</BaseLayout>

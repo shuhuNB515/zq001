@@ -1,0 +1,16 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import AdminLayout from '@/components/common/AdminLayout.vue'
+import AdminUserProfileContent from '@/components/admin-user-profile/AdminUserProfileContent.vue'
+---
+
+<BaseLayout title="用户详情页 - 智取未来">
+  <CommonHeader client:load variant="admin" />
+  <AdminLayout client:load headerHeight="80px">
+    <main class="flex-1 overflow-auto">
+      <AdminUserProfileContent client:idle />
+    </main>
+  </AdminLayout>
+</BaseLayout>

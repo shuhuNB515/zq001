@@ -1,0 +1,17 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import ScheduleDeliveryForm from '@/components/client-schedule-delivery/ScheduleDeliveryForm.vue'
+---
+
+<BaseLayout title="预约寄件 - 智取未来">
+  <CommonHeader client:load />
+  
+  <main class="flex-1 min-h-[calc(100vh-80px-120px)]">
+    <ScheduleDeliveryForm client:load />
+  </main>
+
+  <CommonFooter variant="simple" client:idle />
+</BaseLayout>

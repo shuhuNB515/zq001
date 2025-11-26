@@ -1,0 +1,32 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import ClientDashboardHeader from '@/components/client-dashboard/ClientDashboardHeader.vue'
+import ClientDashboardServiceCards from '@/components/client-dashboard/ClientDashboardServiceCards.vue'
+import ClientDashboardNotifications from '@/components/client-dashboard/ClientDashboardNotifications.vue'
+import ClientDashboardQuickLinks from '@/components/client-dashboard/ClientDashboardQuickLinks.vue'
+---
+
+<BaseLayout title="客户端仪表盘 - 智取未来">
+  <CommonHeader client:load variant="default" showNav={true} currentUser="张三" />
+  
+  <main class="flex-1 min-h-[calc(100vh-80px-200px)]">
+    <div class="container mx-auto px-4 py-8">
+      <!-- User Welcome Section -->
+      <ClientDashboardHeader client:idle />
+      
+      <!-- Service Cards Grid -->
+      <ClientDashboardServiceCards client:idle />
+      
+      <!-- Notifications Section -->
+      <ClientDashboardNotifications client:idle />
+      
+      <!-- Quick Links Section -->
+      <ClientDashboardQuickLinks client:idle />
+    </div>
+  </main>
+
+  <CommonFooter client:load variant="simple" />
+</BaseLayout>

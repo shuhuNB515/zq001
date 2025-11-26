@@ -1,0 +1,16 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import FAQContent from '@/components/client-faq/FAQContent.vue'
+---
+
+<BaseLayout title="常见问题解答 - 智取未来">
+  <CommonHeader client:load />
+  
+  <main class="flex flex-col min-h-[calc(100vh-80px)]">
+    <FAQContent client:idle />
+    <CommonFooter variant="simple" />
+  </main>
+</BaseLayout>

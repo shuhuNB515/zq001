@@ -1,0 +1,14 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import AdminLayout from '@/components/common/AdminLayout.vue'
+import AnnouncementPublishContent from '@/components/admin-system-announcement-publish/AnnouncementPublishContent.vue'
+---
+
+<BaseLayout title="系统公告发布 - 智取未来">
+  <CommonHeader client:load variant="admin" />
+  <AdminLayout client:load headerHeight="80px">
+    <AnnouncementPublishContent client:load />
+  </AdminLayout>
+</BaseLayout>

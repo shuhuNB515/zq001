@@ -1,0 +1,14 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import AdminLayout from '@/components/common/AdminLayout.vue'
+import MaintenanceScheduleContent from '@/components/admin-device-maintenance-schedule/MaintenanceScheduleContent.vue'
+---
+
+<BaseLayout title="设备维护计划 - 智取未来">
+  <CommonHeader client:load variant="admin" />
+  <AdminLayout client:load headerHeight="80px">
+    <MaintenanceScheduleContent client:idle />
+  </AdminLayout>
+</BaseLayout>

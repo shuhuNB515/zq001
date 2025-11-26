@@ -1,0 +1,15 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import PickupServiceEntry from '@/components/client-pickup-service-entry/PickupServiceEntry.vue'
+---
+
+<BaseLayout title="取件服务 - 智取未来">
+  <CommonHeader client:load />
+  <main class="flex-1 min-h-[calc(100vh-80px-120px)]">
+    <PickupServiceEntry client:load />
+  </main>
+  <CommonFooter variant="simple" />
+</BaseLayout>

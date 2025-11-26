@@ -1,0 +1,49 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import PackageTrackingForm from '@/components/client-package-tracking-entry/PackageTrackingForm.vue'
+import RecentSearches from '@/components/client-package-tracking-entry/RecentSearches.vue'
+import QueryTips from '@/components/client-package-tracking-entry/QueryTips.vue'
+---
+
+<BaseLayout title="快件查询 - 智取未来">
+  <CommonHeader client:load />
+  
+  <main class="flex-1 min-h-[calc(100vh-80px-200px)]">
+    <div class="container mx-auto px-4 py-12">
+      <!-- Page Header -->
+      <div class="mb-12">
+        <div class="flex items-center space-x-3 mb-4">
+          <a href="./client-dashboard.html" class="text-primary hover:text-primary/80 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </a>
+          <h1 class="text-4xl font-bold text-foreground">快件查询</h1>
+        </div>
+        <p class="text-lg text-muted-foreground">输入运单号或手机号查看快件实时状态</p>
+      </div>
+
+      <!-- Main Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Left Column: Form and Tips -->
+        <div class="lg:col-span-2 space-y-8">
+          <!-- Query Form -->
+          <PackageTrackingForm client:load />
+          
+          <!-- Query Tips -->
+          <QueryTips client:idle />
+        </div>
+
+        <!-- Right Column: Recent Searches -->
+        <div class="lg:col-span-1">
+          <RecentSearches client:idle />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <CommonFooter client:load variant="simple" />
+</BaseLayout>

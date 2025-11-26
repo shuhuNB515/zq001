@@ -1,0 +1,1 @@
+function getActiveElement(){let activeElement=document.activeElement;if(activeElement==null)return null;for(;activeElement!=null&&activeElement.shadowRoot!=null&&activeElement.shadowRoot.activeElement!=null;)activeElement=activeElement.shadowRoot.activeElement;return activeElement}export{getActiveElement as g};

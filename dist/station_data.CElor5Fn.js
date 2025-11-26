@@ -1,0 +1,37 @@
+const MOCK_STATION_INFO = {
+  name: "智取未来（总部网点）",
+  address: "北京市海淀区科技园路 88 号智能物流中心",
+  phoneNumber: "010-8888-6666",
+  serviceHours: "周一至周日 09:00 - 21:00 (机器人服务 24小时)",
+  mapUrl: "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2025/11/26/02590129-fc61-4754-8df3-608b5d0b7577.png"
+};
+const MOCK_FAQs = [
+  {
+    id: 1,
+    question: "快件免费存储时长是多久？",
+    answer: "快件入库后，提供 7 个自然日的免费存储期。超过免费期后，将按照每日 1.00 元/件收取超期保管费。",
+    tags: ["存储", "超时规则"]
+  },
+  {
+    id: 2,
+    question: "寄件有哪些限制？",
+    answer: "禁止寄递国家法律法规规定的危险品及违禁品。对于超大、超重或异形件，请提前联系客服确认是否支持寄件服务。",
+    tags: ["寄件限制", "违禁品"]
+  },
+  {
+    id: 3,
+    question: "取件码丢失如何处理？",
+    answer: "您可以通过刷脸、手机号验证等方式进行身份核验后取件，或者在客户端快件查询页面重新获取取件码。",
+    tags: ["取件", "安全"]
+  },
+  {
+    id: 4,
+    question: "人脸识别失败怎么办？",
+    answer: "请确保光线充足，并摘下眼镜、口罩等遮挡物后重试。若连续失败 3 次，系统将引导您选择其他验证方式。",
+    tags: ["取件", "人脸识别"]
+  }
+];
+export {
+  MOCK_STATION_INFO as M,
+  MOCK_FAQs as a
+};

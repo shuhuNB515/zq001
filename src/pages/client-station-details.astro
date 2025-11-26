@@ -1,0 +1,25 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import StationDetailsContent from '@/components/client-station-details/StationDetailsContent.vue'
+import { MOCK_STATION_INFO } from '@/data/station_data'
+---
+
+<BaseLayout title="网点详情 - 智取未来">
+  <CommonHeader client:load />
+  
+  <main class="flex flex-col min-h-[calc(100vh-80px)]">
+    <StationDetailsContent 
+      client:idle 
+      stationName={MOCK_STATION_INFO.name}
+      address={MOCK_STATION_INFO.address}
+      phoneNumber={MOCK_STATION_INFO.phoneNumber}
+      serviceHours={MOCK_STATION_INFO.serviceHours}
+      mapUrl={MOCK_STATION_INFO.mapUrl}
+    />
+    
+    <CommonFooter variant="simple" />
+  </main>
+</BaseLayout>

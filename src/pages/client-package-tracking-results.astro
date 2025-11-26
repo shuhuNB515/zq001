@@ -1,0 +1,17 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import PackageTrackingResults from '@/components/client-package-tracking-results/PackageTrackingResults.vue'
+---
+
+<BaseLayout title="快件查询结果 - 智取未来">
+  <div class="flex flex-col min-h-screen bg-background">
+    <CommonHeader client:load />
+    <main class="flex-1 container mx-auto px-4 py-8">
+      <PackageTrackingResults client:idle />
+    </main>
+    <CommonFooter client:idle variant="simple" />
+  </div>
+</BaseLayout>

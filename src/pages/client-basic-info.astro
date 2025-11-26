@@ -1,0 +1,46 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import StationInfoCard from '@/components/client-basic-info/StationInfoCard.vue'
+import FAQSection from '@/components/client-basic-info/FAQSection.vue'
+import { Button } from '@/components/ui/button'
+---
+
+<BaseLayout title="客户端基础信息 - 智取未来">
+  <CommonHeader client:load />
+  
+  <main class="flex-1 min-h-[calc(100vh-80px-200px)]">
+    <div class="container mx-auto px-4 py-8">
+      <!-- Page Header -->
+      <div class="mb-8">
+        <div class="flex items-center gap-4 mb-6">
+          <a href="./client-dashboard.html" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            返回仪表盘
+          </a>
+        </div>
+        <h1 class="text-4xl font-bold text-foreground mb-2">基础信息</h1>
+        <p class="text-lg text-muted-foreground">了解网点信息和常见问题解答</p>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Station Info Section -->
+        <div class="lg:col-span-1">
+          <StationInfoCard client:idle />
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="lg:col-span-2">
+          <FAQSection client:idle />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <CommonFooter client:load variant="simple" />
+</BaseLayout>

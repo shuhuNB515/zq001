@@ -1,0 +1,21 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import DeliveryEntryHero from '@/components/client-delivery-entry/DeliveryEntryHero.vue'
+import DeliveryEntryFeatures from '@/components/client-delivery-entry/DeliveryEntryFeatures.vue'
+import DeliveryEntryFAQ from '@/components/client-delivery-entry/DeliveryEntryFAQ.vue'
+---
+
+<BaseLayout title="寄件服务入口 - 智取未来">
+  <CommonHeader client:load />
+  
+  <main class="flex-1 min-h-[calc(100vh-80px)]">
+    <DeliveryEntryHero client:load />
+    <DeliveryEntryFeatures client:idle />
+    <DeliveryEntryFAQ client:idle />
+  </main>
+
+  <CommonFooter client:idle variant="simple" />
+</BaseLayout>

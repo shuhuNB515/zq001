@@ -1,0 +1,17 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import DeliveryInfoForm from '@/components/client-fill-delivery-info/DeliveryInfoForm.vue'
+---
+
+<BaseLayout title="填写寄件信息 - 智取未来">
+  <CommonHeader client:load />
+  
+  <main class="flex-1 min-h-[calc(100vh-80px-120px)]">
+    <DeliveryInfoForm client:load />
+  </main>
+
+  <CommonFooter variant="simple" />
+</BaseLayout>

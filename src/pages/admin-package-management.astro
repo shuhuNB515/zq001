@@ -1,0 +1,14 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import AdminLayout from '@/components/common/AdminLayout.vue'
+import PackageManagementContent from '@/components/admin-package-management/PackageManagementContent.vue'
+---
+
+<BaseLayout title="快件管理 - 智取未来">
+  <CommonHeader client:load variant="admin" />
+  <AdminLayout client:load headerHeight="80px">
+    <PackageManagementContent client:idle />
+  </AdminLayout>
+</BaseLayout>

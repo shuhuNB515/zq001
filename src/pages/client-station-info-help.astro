@@ -1,0 +1,42 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import StationInfoCard from '@/components/client-station-info-help/StationInfoCard.vue'
+import FAQPreview from '@/components/client-station-info-help/FAQPreview.vue'
+import NavigationSection from '@/components/client-station-info-help/NavigationSection.vue'
+---
+
+<BaseLayout title="网点信息与帮助 - 智取未来">
+  <CommonHeader client:load />
+  
+  <main class="flex-1 min-h-[calc(100vh-80px-200px)]">
+    <div class="container mx-auto px-4 py-12">
+      <!-- Page Header -->
+      <div class="mb-12">
+        <h1 class="text-4xl font-bold text-foreground mb-2">网点信息与帮助</h1>
+        <p class="text-lg text-muted-foreground">了解我们的服务信息和常见问题解答</p>
+      </div>
+
+      <!-- Station Info Section -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-foreground mb-6">网点信息</h2>
+        <StationInfoCard client:idle />
+      </section>
+
+      <!-- FAQ Preview Section -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-foreground mb-6">常见问题</h2>
+        <FAQPreview client:idle />
+      </section>
+
+      <!-- Navigation Section -->
+      <section>
+        <NavigationSection client:idle />
+      </section>
+    </div>
+  </main>
+
+  <CommonFooter client:load variant="simple" />
+</BaseLayout>

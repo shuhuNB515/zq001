@@ -1,0 +1,1 @@
+import{i as injectConfigProviderContext}from"./Presence.BaHqK_e-.js";import{h as ref,k as computed}from"./runtime-core.esm-bundler.T-J3b-OY.js";function useDirection(dir){const context=injectConfigProviderContext({dir:ref("ltr")});return computed(()=>dir?.value||context.dir?.value||"ltr")}export{useDirection as u};

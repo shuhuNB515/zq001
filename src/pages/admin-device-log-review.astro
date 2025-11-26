@@ -1,0 +1,14 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import AdminLayout from '@/components/common/AdminLayout.vue'
+import DeviceLogReview from '@/components/admin-device-log-review/DeviceLogReview.vue'
+---
+
+<BaseLayout title="设备日志审查 - 智取未来">
+  <CommonHeader client:load variant="admin" />
+  <AdminLayout client:load headerHeight="80px">
+    <DeviceLogReview client:idle />
+  </AdminLayout>
+</BaseLayout>
