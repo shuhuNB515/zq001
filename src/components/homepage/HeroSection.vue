@@ -2,6 +2,7 @@
 <script setup lang="ts">
 import { HOMEPAGE_BANNER_IMAGE } from '@/data/client_data'
 import SafeIcon from '@/components/common/SafeIcon.vue'
+import Logo from '@/image/png/logo.jpg?url'
 </script>
 
 <template>
@@ -21,7 +22,7 @@ import SafeIcon from '@/components/common/SafeIcon.vue'
         <!-- Logo and Brand -->
         <div class="flex flex-col items-center space-y-6">
           <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-2xl animate-pulse">
-            <img src="/src/assets/png/智取未来.png" alt="智取未来" class="w-full h-full rounded-xl object-cover">
+            <img :src="Logo" alt="智取未来logo" class="w-full h-full rounded-xl object-cover">
           </div>
           
           <div class="space-y-3">

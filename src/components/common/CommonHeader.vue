@@ -3,6 +3,7 @@
 import { ref, onMounted } from 'vue'
 import { Button } from '@/components/ui/button'
 import SafeIcon from '@/components/common/SafeIcon.vue'
+import Logo from '../../image/png/logo.jpg?url';
 import {
   Sheet,
   SheetContent,
@@ -48,7 +49,7 @@ const handleLogout = () => {
       <!-- Logo and Brand -->
       <a href="./homepage.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
         <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
-          <img src="/src/assets/png/智取未来.png" alt="智取未来" class="w-full h-full rounded-xl object-cover">
+          <img :src="Logo" alt="智取未来" class="w-full h-full rounded-xl object-cover">
         </div>
         <span class="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
           智取未来

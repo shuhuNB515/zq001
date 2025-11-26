@@ -1,5 +1,5 @@
 import { defineComponent, useSSRContext, mergeProps, withCtx, createVNode } from "vue";
-import { S as SafeIcon, B as Button } from "./CommonHeader.C8V6ndRc.js";
+import { S as SafeIcon, B as Button } from "./CommonHeader.u0BIjTIh.js";
 import { ssrRenderAttrs, ssrRenderList, ssrRenderAttr, ssrInterpolate, ssrRenderComponent } from "vue/server-renderer";
 import { _ as _export_sfc } from "./_plugin-vue_export-helper.C7D2g9-_.js";
 const _sfc_main = defineComponent({ __name: "CommonFooter", props: { variant: { default: "simple" } }, setup(__props, { expose: __expose }) {

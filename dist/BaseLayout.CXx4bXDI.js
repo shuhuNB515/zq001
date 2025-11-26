@@ -1,9 +1,9 @@
-import { c as createComponent, b as createAstro, d as addAttribute, e as renderHead, f as renderSlot, a as renderTemplate } from "./astro/server.CkvNBHb9.js";
+import { b as createAstro, c as createComponent, d as addAttribute, e as renderHead, f as renderSlot, a as renderTemplate } from "./astro/server.COULYAGe.js";
 import "piccolore";
 import "html-escaper";
 import "clsx";
 /* empty css                                          */
-const $$Astro = createAstro();
+const $$Astro = createAstro("https://shuhuNB515.github.io");
 const $$BaseLayout = createComponent(($$result, $$props, $$slots) => {
   const Astro = $$result.createAstro($$Astro, $$props, $$slots);
   Astro.self = $$BaseLayout;
